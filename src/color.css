@@ -1,0 +1,143 @@
+/*------------scss-background-color---------------------*/
+
+$white-b-c: white;
+
+$yellow-b-c: yellow;
+
+$red-b-c: red;
+
+$green-b-c: green;
+
+$gray-b-c: gray;
+
+/*----------------scss-color---------------------*/
+
+$color-red: #FF0000;
+
+$color-green: #00FF00;
+
+$color-blue: #0000FF;
+
+/*-----------------background-color---------------------*/
+
+.bgcw{
+	background-color: white;
+}
+
+.bgcy{
+	background-color: yellow;
+}
+
+.bgcr{
+	background-color: red;
+}
+
+.bgcg{
+	background-color: #50846d;
+}
+
+.bgc-green{
+	background-color:#248a83;
+}
+
+.bgc-transparent{
+	background-color: transparent;
+}
+
+.bgc-metal-gray{
+background-color: #E5E4E2;
+}
+/*-----------------color---------------------*/
+.wcolor{
+	color: white;
+}
+
+.rcolor{
+	color:red;
+}
+
+.mnbcolor{
+   background: #151B54;
+}
+
+.gcolor{
+	color:gray;
+}
+
+.product-color{
+	color: #333;
+}
+
+.color-green{
+	color:#248a83;
+}
+
+.footer-title{
+	color:#d99054;
+}
+
+.light-brown-title{
+	color:#d99054;
+}
+
+.bluecolor{
+	color:#227d77;
+}
+
+
+/*----------Border---------------*/
+
+.border-all{
+	border: 1px solid #e1e1e1;	
+}
+
+.border-color-top{
+	border-style: solid;
+	border-top-width: 8px;
+	border-color: #e1e1e1;
+
+}
+
+.border-color-top-dotted{
+	border-top-style: dotted;
+	border-top-width: 1px;
+	border-color: #e1e1e1;
+}
+
+.border-color-black{
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+}
+
+.border-color-white{
+	border-style: solid;
+	border-color: white;
+	border-width: 3px;
+}
+
+
+.no-border{
+	background-color: transparent;
+	border: 0px solid;
+}
+
+.border-right-radius{
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	
+}
+
+.border-left-radius{
+	border-top-left-radius: 2em;
+	border-bottom-left-radius: 2em;
+	
+}
+
+.border-radius-no{
+		border-right: 0em;
+}
+
+
+
+
