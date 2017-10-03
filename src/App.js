@@ -7,7 +7,7 @@ class App extends Component {
   removeTodo(index){ //a function to remove a todo with a button click to remove
     console.log(index);
     let todos = this.state.todos;
-    let todo =todos.find(function(todo){
+    let todo = todos.find(function(todo){
       return todo.counter === index;
     });
     
@@ -66,7 +66,7 @@ class App extends Component {
     let todos = this.state.todos; //setting a parameter in tha app and giving it the todos
     return (
       <div className="App">
-        <h1 className="margin-all-ex-lar"> {title} </h1>
+        <h1 className="margin-all-ex-lar font-f-Nosifer bgcr pad-sml"> {title} </h1>
         <form ref="todoForm" className="margin-all-ex-lar" >
           <div>  
             <input className="margin-all-ex-lar" type="text" ref="name" placeholder="What to do"/>

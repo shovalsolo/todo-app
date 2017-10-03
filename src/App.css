@@ -6,6 +6,9 @@
 @import "text.css";
 @import "reset.css";
 
+body{
+  background: url(../src/image/toronto.jpg) no-repeat center center scroll;
+}
 
 .App {
   text-align: center;
