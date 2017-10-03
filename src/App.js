@@ -47,10 +47,6 @@ class App extends Component {
     let todo =todos.find(function(todo){
       return todo.counter === event;
     });
-    /*
-    var d = document.getElementById("app-box");
-    d.className += " red-done"; 
-    */
   }
 
   constructor(){
