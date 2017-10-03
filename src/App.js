@@ -4,18 +4,6 @@ import './App.css';
 
 class App extends Component {
 
-  details(index){ //this function will give you details
-    console.log(index);
-    let todos = this.state.todos;
-    let todo =todos.find(function(todo){
-      return todo.counter === index
-    });
-
-    alert(`The Todo task is ${todo.completed}`)
-  }
-
-  
-
   removeTodo(index){ //a function to remove a todo with a button click to remove
     console.log(index);
     let todos = this.state.todos;
@@ -33,12 +21,10 @@ class App extends Component {
   addTodo(event){
     event.preventDefault(); //will prevent the form to refresh when clicking the button
     let name = this.refs.name.value; //will hold the value of the name field
-    let completed = this.refs.completed.value; //will hold the value of the completed field
     let counter = this.state.counter; //will hold the value of the counter field
     
     let todo = { // an object with 3 parameters 
       name,
-      completed,
       counter
     };
     counter +=1; //incresing the counter for every task that wes created
@@ -54,18 +40,23 @@ class App extends Component {
     this.refs.todoForm.reset(); //this will clear the form fields after adding the info to the screen
   }
 
-  doneTask(index){
-    if(this.value === "no"){
-      console.log("in the if");
-    }
-    console.log("doneTask");
+  doneTask(event){
+    console.log(event.target.parentElement);
+    event.target.parentElement.className += " red-done";
+    let todos = this.state.todos;
+    let todo =todos.find(function(todo){
+      return todo.counter === event;
+    });
+    /*
+    var d = document.getElementById("app-box");
+    d.className += " red-done"; 
+    */
   }
 
   constructor(){
     super();
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
-    this.details = this.details.bind(this);
     this.doneTask = this.doneTask.bind(this);
     this.state ={
       todos:[],
@@ -83,17 +74,16 @@ class App extends Component {
         <form ref="todoForm" className="margin-all-ex-lar" >
           <div>  
             <input className="margin-all-ex-lar" type="text" ref="name" placeholder="What to do"/>
-            <input className="margin-all-ex-lar" type="text" ref="completed" placeholder="Done or not"/>
             <button className="margin-all-ex-lar" onClick={this.addTodo}>Add todo</button>{/*will call the func todo*/}
           </div>
         </form>
           <ul className="flex flex-jus-spa-aro flex-wrap">
             {todos.map((todo =>
-              <li className="app-box margin-all-lar" key={todo.counter}>{todo.name}
+              <li id="app-box" className="app-box margin-all-lar" key={todo.counter}>{todo.name}
               <br/>
               <button className="margin-all-ex-lar" onClick={this.removeTodo.bind(null, todo.counter)}>Remove Todo</button>
               <br/>
-                <select className="margin-all-ex-lar"  onChange={this.doneTask.bind(null, todo.counter)}>
+                <select className="margin-all-ex-lar"  onChange={this.doneTask}>
                   <option value="No" >Not done</option>
                   <option value="Yes" >Done</option>
                 </select>
