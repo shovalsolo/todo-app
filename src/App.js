@@ -49,19 +49,19 @@ class App extends Component {
     });
   }
 
-  constructor(){
+  constructor(){//restarting the parameters and functions
     super();
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
     this.doneTask = this.doneTask.bind(this);
     this.state ={
-      todos:[],
+      todos:[], //empty array
       title:'Todo application',
       counter: 0
     }
   }
 
-  render() {
+  render() { //rerendering the app
     let title = this.state.title; //setting a parameter in tha app and giving it the title
     let todos = this.state.todos; //setting a parameter in tha app and giving it the todos
     return (
